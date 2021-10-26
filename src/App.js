@@ -1,19 +1,33 @@
+import { Component } from "react";
 import { Container, Row } from "react-bootstrap";
 import Header from "./components/Header";
 import Card from "./components/Card";
 
-function App() {
-  return (
-    <Container className="p-3">
-      <Header />
-      <Row>
-        <Card title={"event.key"} />
-        <Card title={"event.location"} />
-        <Card title={"event.which"} />
-        <Card title={"event.code"} />
-      </Row>
-    </Container>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      key: "",
+      location: "",
+      which: "",
+      code: "",
+    };
+  }
+
+  render() {
+    const { key, location, which, code } = this.state;
+    return (
+      <Container className="p-3">
+        <Header />
+        <Row>
+          <Card title={"event.key"} value={key} />
+          <Card title={"event.location"} value={location} />
+          <Card title={"event.which"} value={which} />
+          <Card title={"event.code"} value={code} />
+        </Row>
+      </Container>
+    );
+  }
 }
 
 export default App;
