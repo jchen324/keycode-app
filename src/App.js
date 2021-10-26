@@ -14,6 +14,19 @@ class App extends Component {
     };
   }
 
+  componentDidMount = () => {
+    document.body.addEventListener("keydown", this.onKeyDown);
+  };
+
+  onKeyDown = (event) => {
+    this.setState({
+      key: event.key,
+      location: event.location,
+      which: event.which,
+      code: event.code,
+    });
+  };
+
   render() {
     const { key, location, which, code } = this.state;
     return (
