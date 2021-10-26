@@ -4,7 +4,7 @@ function Header() {
   return (
     <Jumbotron>
       <h1 className="header text-center">
-        Press any key to get the JavaScript Keycode
+        Press any key to get the JavaScript KeyCode
       </h1>
     </Jumbotron>
   );
