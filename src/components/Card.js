@@ -9,9 +9,9 @@ function Card(props) {
         <BootstrapCard.Header>
           <code>{title}</code>
         </BootstrapCard.Header>
-        <BootstrapCard.Body>
+        <BootstrapCard.Body style={{minHeight: "4rem"}}>
           <BootstrapCard.Text>
-            <pre>{value}</pre>
+            <code style={{color: "black"}}>{value}</code>
           </BootstrapCard.Text>
         </BootstrapCard.Body>
       </BootstrapCard>
